@@ -1,0 +1,31 @@
+.faq {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.faq h2 {
+  text-align: center;
+}
+.faq p {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faq li {
+  margin: 10px 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* .faq p {
+  margin: 10px 0 0 20px;
+} */
