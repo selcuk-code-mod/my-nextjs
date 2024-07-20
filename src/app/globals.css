@@ -11,25 +11,115 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #fff;
+  margin: 20px 40px;
+  border-radius: 5px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.homePage {
+  background-color: #faf8f8;
+  padding: 10px 10px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.content {
+  margin-top: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.flex {
+  display: flex;
+  gap: 3px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.center-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  height: auto;
+}
+
+.hidden {
+  height: 0px;
+}
+
+.open {
+  height: auto;
+}
+
+.transition {
+  transition: height 2s;
+}
+
+.my-card > * {
+  transition: height 2s;
+}
+
+@media (max-width: 480px) {
+  .myBreadcrumb {
+    font-size: 12px;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mainImage {
+    width: 12rem;
+    height: auto;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .layer {
+    width: 6rem;
+    height: auto;
+  }
+}
+@media (max-width: 550px) {
+  .myAccordion,
+  .myTabs {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .myImages {
+    max-width: 4rem;
+  }
+  .myBreadcrumb {
+    font-size: 12px;
+    gap: 0px;
+  }
+  .myButton {
+    width: 1rem;
+    height: auto;
+    font-size: 9px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .myAccordion {
+    max-width: 100px;
+    height: auto;
+  }
+  .images {
+    max-width: 16px;
+    height: auto;
+  }
+  .icons {
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .span,
+  .country {
+    display: none;
   }
 }

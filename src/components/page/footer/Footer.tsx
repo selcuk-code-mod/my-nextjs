@@ -1,6 +1,6 @@
 import { Button, Col, Row } from "antd";
 
-import { ColorToken } from "../color";
+import { ColorToken } from "../../color";
 import Image from "next/image";
 import {
   FacebookOutlined,

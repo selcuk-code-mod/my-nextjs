@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+.incBreadcrumb {
+  display: none;
+}
+.menuIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  .incBreadcrumb {
+    display: block;
+  }
+  .menuIcon {
+    display: none;
+  }
+}

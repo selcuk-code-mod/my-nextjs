@@ -3,37 +3,46 @@
 import React, { useState } from "react";
 import { Button, Card } from "antd";
 import { CardType } from "../page/tabs/MyTabs";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 const MyCard = ({ card }: { card: CardType }) => {
   const { image, content, title, type } = card;
-
   const [isOpen, setIsOpen] = useState(false);
-
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <Card style={{ marginTop: "10px" }} className="my-card">
+    <Card style={{ marginTop: "5px" }} className="my-card">
       <>
         <div className="flex center-between">
-          {/* Resim */}
-          <div>
-            <img
-              src="/public/Rectangle 44.jpg"
-              alt="alt"
-              height={45}
-              width={45}
-            />
-          </div>
-          {/* Başlık ve Tip */}
-          <div className="flex-col center">
-            <span style={{ color: "grey", fontSize: "0.8rem" }}>{type}</span>
-            <span>{title}</span>
-          </div>
-          <Button
-            onClick={() => {
-              setIsOpen((s) => !s);
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              gap: "10px",
             }}
           >
-            +
-          </Button>
+            <img
+              style={{
+                backgroundColor: "#134e70",
+                borderRadius: "10px",
+                width: "40px",
+                height: "47px",
+              }}
+              src={image}
+              alt="alt"
+            />
+            <div className="flex-col center">
+              <span style={{ color: "grey", fontSize: "1rem" }}>{type}</span>
+              <span style={{ color: "#000", fontWeight: "700 " }}>{title}</span>
+            </div>
+          </div>
+          <div>
+            <Button
+              onClick={toggleAccordion}
+              icon={isOpen ? <UpOutlined /> : <DownOutlined />}
+            />
+          </div>
         </div>
         <div className={`content overflow-hidden transition`}>
           <div className={`${isOpen ? "open" : "hidden"} overflow-hidden`}>
