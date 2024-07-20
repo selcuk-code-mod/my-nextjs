@@ -39,6 +39,7 @@ const MyCard = ({ card }: { card: CardType }) => {
           </div>
           <div>
             <Button
+              style={{ borderRadius: "%50" }}
               onClick={toggleAccordion}
               icon={isOpen ? <UpOutlined /> : <DownOutlined />}
             />
